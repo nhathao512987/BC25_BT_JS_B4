@@ -8,18 +8,21 @@ document.getElementById("xuatkq").onclick = function () {
 
     // Xử Lý : công thức và điều kiện
     if ( soNguyen1 > soNguyen2 && soNguyen2 > soNguyen3 ) {
-        console.log(soNguyen3,soNguyen2,soNguyen1);
+        var soSanhKQ = " Thứ Tự Tăng Dần Là " +" " + soNguyen3 + " " + soNguyen2 + " " + soNguyen1;
     }   else if ( soNguyen1 > soNguyen2 && soNguyen1 > soNguyen3 && soNguyen3 > soNguyen2) {
-       console.log(soNguyen2,soNguyen3,soNguyen1);
+        var soSanhKQ = " Thứ Tự Tăng Dần Là " +" " + soNguyen2 + " " + soNguyen3 + " " + soNguyen1;
     }   else if ( soNguyen2 > soNguyen1 && soNguyen1 > soNguyen3 ) {
-        console.log(soNguyen3,soNguyen1,soNguyen2);
+        var soSanhKQ = " Thứ Tự Tăng Dần Là " +" " + soNguyen3 + " " + soNguyen1 + " " + soNguyen2;
     }   else if ( soNguyen2 > soNguyen1 && soNguyen2 > soNguyen3 && soNguyen3 > soNguyen1) {
-        console.log(soNguyen1,soNguyen3,soNguyen2);
+        var soSanhKQ = " Thứ Tự Tăng Dần Là " +" " + soNguyen1 + " " + soNguyen3 + " " + soNguyen2;
     }   else if ( soNguyen3 > soNguyen1 && soNguyen1 > soNguyen2) {
-        console.log(soNguyen2,soNguyen1,soNguyen3);
+        var soSanhKQ = " Thứ Tự Tăng Dần Là " +" " + soNguyen2 + " " + soNguyen1 + " " + soNguyen3;
     }   else if ( soNguyen3 > soNguyen1 && soNguyen3 > soNguyen2 && soNguyen2 > soNguyen1) {
-        console.log(soNguyen1,soNguyen2,soNguyen3);
+        var soSanhKQ = " Thứ Tự Tăng Dần Là " +" " + soNguyen1 + " " + soNguyen2 + " " + soNguyen3;
     }
+
+    // Xuất Kết Quả So Sánh
+    document.getElementById("thongbaoss").innerHTML = soSanhKQ;
 }
 
 /* BT 2 - Viết Chương Trình Chào Hỏi*/
@@ -30,13 +33,16 @@ document.getElementById("loichao").onclick = function () {
 
     
     if ( danhTinh == "Bố" ) {
-        console.log("Con Rất Chào bố");
+        var chao = "Con Rất Chào bố";
     }  else if ( danhTinh == "Mẹ") {
-        console.log("Con Hơi Chào Mẹ");
+        var chao = "Con Hơi Chào Mẹ";
     }  else if ( danhTinh == "Anh Trai" ) {
-        console.log("Em chào anh trai nhé");
+        var chao = "Em chào anh trai nhé";
     }  else if ( danhTinh == "Em Gái" )
-        console.log("Ai vậy ? tui không có em gái");
+        var chao = "Ai vậy ? tui không có em gái";
+
+    // Xuất Kết Quả So Sánh
+    document.getElementById("thongbaolc").innerHTML = chao ;
 }
 
 /* BT3 Xuất ra bao nhiêu số lẻ và bao nhiêu số chẵn */
@@ -48,24 +54,29 @@ document.getElementById("xacDinh").onclick = function () {
     var soThu3 = document.getElementById("nhapSoThu3").value * 1;
 
     if ( soThu1 % 2 == 0 ) {
-        console.log(soThu1 + " " + "là số chẵn");
+        var chanLe1 = soThu1 + " " + "là số chẵn";
     }   else  {
-        console.log(soThu1 + " " + "là số lẻ");
+        var chanLe1 = soThu1 + " " + "là số lẻ";
     }
 
     if ( soThu2 % 2 == 0 ) {
-        console.log(soThu2 + " " + "là số chẵn");
+        var chanLe2 = soThu2  + " " + "là số chẵn";
     }   else  {
-        console.log(soThu2 + " " + "là số lẻ");
+        var chanLe2 = soThu2 + " " + "là số lẻ";
     }
 
     if ( soThu3 % 2 == 0 ) {
-        console.log(soThu3 + " " + "là số chẵn");
+        var chanLe3 = soThu3 + " " + "là số chẵn";
     }   else  {
-        console.log(soThu3 + " " + "là số lẻ");
+        var chanLe3 = soThu3 + " " + "là số lẻ";
     }
-}      
 
+    // Xuất Kết Quả So Sánh
+    document.getElementById("thongbaocl1").innerHTML = chanLe1 ;
+    document.getElementById("thongbaocl2").innerHTML = chanLe2 ;
+    document.getElementById("thongbaocl3").innerHTML = chanLe3 ;
+}      
+    
 
 /* BT 4 - Cho biết tam giác gì ? */
 document.getElementById("xuatTamGiac").onclick = function () {
@@ -84,14 +95,17 @@ document.getElementById("xuatTamGiac").onclick = function () {
     if  ((  canh1 == canh2  && canh1 !== canh3) 
         || (canh1 == canh3  && canh1 !== canh2)
         || (canh2 == canh3  && canh1 !== canh2)) {
-        console.log("Tam Giác Cân");
+        var TGG = "Tam Giác Cân";
     }   else if ( canh1 == canh2 && canh1 == canh3 && canh2 == canh3 ) {
-        console.log("Tam Giác Đều");
+        var TGG  = "Tam Giác Đều";
     }   else if (( canhHuyen1 == canh1)
             ||  (  canhHuyen2 == canh2)
             ||  (  canhHuyen3 == canh3)) {
-        console.log("Tam Giác Vuông");
+        var TGG = "Tam Giác Vuông";
     }   else  { 
-        console.log("Tam Giác Thường");
+        var TGG  = "Tam Giác Thường";
     }
+
+    //Đầu Ra Kết quả tam giác gì
+    document.getElementById("thongbaocTGG").innerHTML = TGG  ;
 }
